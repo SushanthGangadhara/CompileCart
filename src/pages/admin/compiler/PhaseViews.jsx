@@ -742,7 +742,7 @@ function QuadruplesTab({ phase, tacText }) {
             <div key={f.ln} style={{ display:'flex', gap:'1.5rem' }}>
               <span style={{ color:'#334155', userSelect:'none', minWidth:20 }}>{f.ln}</span>
               <span style={{ flex:1, color:'#e2e8f0' }}>{f.line}</span>
-              <span style={{ color:'#475569', fontSize:'.78rem' }}>// {f.comment}</span>
+              <span style={{ color:'#475569', fontSize:'.78rem' }}>{`// ${f.comment}`}</span>
             </div>
           ))}
         </div>

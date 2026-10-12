@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, ShoppingCart } from 'lucide-react';
-import { ProductStore, formatCurrency } from '../../data/storage';
+import { Heart } from 'lucide-react';
+import { ProductStore } from '../../data/storage';
 import { useCart } from '../../context/CartContext';
 import ProductCard from '../../components/common/ProductCard';
 
 export default function Wishlist() {
-  const { wishlistIds, toggleWishlist } = useCart();
+  const { wishlistIds } = useCart();
   const products = wishlistIds.map(id => ProductStore.findById(id)).filter(Boolean);
 
   if (products.length === 0) return (

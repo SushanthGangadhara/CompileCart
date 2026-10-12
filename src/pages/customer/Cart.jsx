@@ -56,9 +56,7 @@ export default function Cart() {
                     <div className="qty-control">
                       <button onClick={() => updateQty(item.productId, item.quantity - 1)}><Minus size={13} /></button>
                       <span>{item.quantity}</span>
-                      <button onClick={() => {
-                        const r = updateQty(item.productId, item.quantity + 1);
-                      }}><Plus size={13} /></button>
+                      <button onClick={() => updateQty(item.productId, item.quantity + 1)}><Plus size={13} /></button>
                     </div>
                     <p className="item-total">{formatCurrency(p.price * item.quantity)}</p>
                     <button className="remove-btn" onClick={() => removeFromCart(item.productId)}>
